@@ -1,27 +1,28 @@
 import { useMetamask } from "@thirdweb-dev/react";
-import React from "react";
+import React, { useEffect } from "react";
+import Navbar from "./Navbar";
+import { themeChange } from "theme-change";
 
 function Login() {
   const connectWithMetamask = useMetamask();
-  return (
-    <div className="bg-[#091B18] min-h-screen flex flex-col items-center justify-center text-center">
-      <div className="flex flex-col items-center mb-10">
-        <img
-          className="rounded-full h-56 wo-56 mb-10"
-          src="http://i.imgur.com/4h7mAu7.png"
-          alt=""
-        />
-        <h1 className="text-6xl text-white font-bold">0xAbdo draw</h1>
-        <h2 className="text-2xl text-white font-bold">
-          get started by connecting your wallet
-        </h2>
 
-        <button
-          onClick={connectWithMetamask}
-          className="bg-white px-8 py-5 mt-10 rounded-lg shadow-lg font-bold"
-        >
-          login with metamask
-        </button>
+  return (
+    <div className="bg-black">
+      <Navbar />
+      <div className="bg-gradient-to-b from-zinc-900 via-zinc-900 to-black min-h-screen flex flex-col items-center justify-center text-center">
+        <div className="flex flex-col items-center mb-10">
+          <h1 className="text-6xl text-emerald-500 font-bold">DrawRooms💸</h1>
+          <h2 className="text-xl  font-bold mt-2 mb-4">
+            the most efficient web3 lottery system
+          </h2>
+
+          <button
+            onClick={connectWithMetamask}
+            className="btn btn-outline btn-ghost"
+          >
+            login with metamask
+          </button>
+        </div>
       </div>
     </div>
   );
