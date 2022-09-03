@@ -12,7 +12,7 @@ function NavButton({ title, isActive, onClick }: Props) {
       onClick={onClick}
       className={`${
         isActive && "bg-[#036756]"
-      } hover:bg-[#036756] text-white py-2 px-4 rounded font-bold`}
+      } hover:bg-[#036756] text-white py-2 px-4 rounded font-bold btn btn-ghost`}
     >
       {title}
     </button>

@@ -108,7 +108,7 @@ function AdminControls() {
   };
 
   return (
-    <div className="text-white text-center px-5 py-3 rounded-md border-emerald-300/20 border">
+    <div className="text-white text-center px-5 py-3 mb-4 border-emerald-300/20 border">
       <h2 className="font-bold">Admin Controls</h2>
       <p className="mb-5">
         Total Commission:{" "}

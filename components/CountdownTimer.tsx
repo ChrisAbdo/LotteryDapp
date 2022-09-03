@@ -22,25 +22,41 @@ function CountdownTimer() {
   const renderer = ({ hours, minutes, seconds, completed }: Props) => {
     if (completed) {
       return (
-        <div>
-          <h2 className="text-white text-xl text-center animate-bounce">
-            Ticket Sales have now CLOSED for this draw
-          </h2>
-          <div className="flex space-x-6">
-            <div className="flex-1">
-              <div className="countdown animate-pulse">{hours}</div>
-              <div className="countdown-label">hours</div>
-            </div>
+        // <div>
+        //   <h2 className="text-white text-xl text-center animate-bounce">
+        //     Ticket Sales have now CLOSED for this draw
+        //   </h2>
+        //   <div className="flex space-x-6">
+        //     <div className="flex-1">
+        //       <div className="countdown animate-pulse">{hours}</div>
+        //       <div className="countdown-label">hours</div>
+        //     </div>
 
-            <div className="flex-1">
-              <div className="countdown animate-pulse">{minutes}</div>
-              <div className="countdown-label">minutes</div>
-            </div>
+        //     <div className="flex-1">
+        //       <div className="countdown animate-pulse">{minutes}</div>
+        //       <div className="countdown-label">minutes</div>
+        //     </div>
 
-            <div className="flex-1">
-              <div className="countdown animate-pulse">{seconds}</div>
-              <div className="countdown-label">seconds</div>
-            </div>
+        //     <div className="flex-1">
+        //       <div className="countdown animate-pulse">{seconds}</div>
+        //       <div className="countdown-label">seconds</div>
+        //     </div>
+        //   </div>
+        // </div>
+        <div className="stats shadow flex space-between">
+          <div className="stat place-items-center">
+            <div className="stat-title">{hours}</div>
+            <div className="stat-value">hours</div>
+          </div>
+
+          <div className="stat place-items-center">
+            <div className="stat-title">{minutes}</div>
+            <div className="stat-value">minutes</div>
+          </div>
+
+          <div className="stat place-items-center">
+            <div className="stat-title">{seconds}</div>
+            <div className="stat-value">seconds</div>
           </div>
         </div>
       );
@@ -48,20 +64,20 @@ function CountdownTimer() {
       return (
         <div>
           <h3 className="text-white text-sm mb-2 italic">Time Remaining</h3>
-          <div className="flex space-x-6">
-            <div className="flex-1">
-              <div className="countdown">{hours}</div>
-              <div className="countdown-label">hours</div>
+          <div className="stats shadow flex space-between">
+            <div className="stat place-items-center">
+              <div className="stat-value">{hours}</div>
+              <div className="stat-value">hours</div>
             </div>
 
-            <div className="flex-1">
-              <div className="countdown">{minutes}</div>
-              <div className="countdown-label">minutes</div>
+            <div className="stat place-items-center">
+              <div className="stat-value">{minutes}</div>
+              <div className="stat-value">minutes</div>
             </div>
 
-            <div className="flex-1">
-              <div className="countdown">{seconds}</div>
-              <div className="countdown-label">seconds</div>
+            <div className="stat place-items-center">
+              <div className="stat-value">{seconds}</div>
+              <div className="stat-value">seconds</div>
             </div>
           </div>
         </div>

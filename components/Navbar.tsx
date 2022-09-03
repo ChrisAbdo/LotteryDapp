@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="">
         <button
           onClick={connectWithMetamask}
-          className="btn btn-outline btn-ghost rounded-none"
+          className=" btn btn-outline btn-ghost rounded-none"
         >
           login with metamask
         </button>
